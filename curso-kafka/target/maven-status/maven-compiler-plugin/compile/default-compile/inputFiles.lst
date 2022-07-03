@@ -1,0 +1,6 @@
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/multithread/Devs4jMultithreadConsumer.java
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/transactional/TransactionalProducer.java
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/producers/Devs4jProducers.java
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/consumer/Desv4jConsumer.java
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/transactional/TransactionalConsumer.java
+/home/platziadmin/proyectos/spring-boot/curso-kafka/src/main/java/com/devs4j/kafka/multithread/Devs4jThreadConsumer.java

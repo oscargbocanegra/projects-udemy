@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Devs4jThreadConsumer.java&apos; to &apos;curso-kafka/src/main/java/com.devs4j.kafka.multithread&apos;&#x0A;- Original project: &apos;curso-kafka&apos;&#x0A;- Destination element: &apos;curso-kafka/src/main/java/com.devs4j.kafka.multithread&apos;&#x0A;- Original element: &apos;com.devs4j.kafka.Devs4jThreadConsumer.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.devs4j.kafka.multithread" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.devs4j.kafka{Devs4jThreadConsumer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1655948822961" units="1" version="1.0"/>
+</session>
