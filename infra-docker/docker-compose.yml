@@ -1,0 +1,85 @@
+version: "3.4"
+
+services:
+  zookeeper:
+    image: bitnami/zookeeper
+#    restart: always
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    volumes:
+      - "zookeeper_data:/bitnami"
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  kafka:
+    image: bitnami/kafka
+    ports:
+      - "9092:9092"
+#    restart: always
+    container_name: kafka
+    volumes:
+      - "kafka_data:/bitnami"
+    environment:
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_CREATE_TOPICS= "desvs4j-topic"
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_LISTENERS=PLAINTEXT://:9092
+#      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+    depends_on:
+      - zookeeper
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    ports:
+    - 9081:9081
+    depends_on:
+    - kafka
+    environment:
+    - SERVER_PORT=9081
+    - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+#    - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+#    - KAFKA_CLUSTERS_0_NAME=kafka-local
+#    - KAFKA_CREATE_TOPICS=desvs4j-topic
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'oscar'
+      MYSQL_PASSWORD: 'Oscar22/*'
+      MYSQL_ROOT_PASSWORD: 'Oscar22/*'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mongodb:
+    image: mongo:latest
+    restart: always
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "oscar"
+      MONGO_INITDB_ROOT_PASSWORD: "Oscar22/*"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local
+  mysql_data:
+    driver: local
+  mongodb_data:
+    driver: local
+
+networks:
+  default:
+    name: bankingNetwork

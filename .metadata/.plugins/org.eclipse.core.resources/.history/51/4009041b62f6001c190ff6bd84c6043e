@@ -1,5 +1,0 @@
-package com.devs4j.kafka.config;
-
-public class KafkaConfiguration {
-
-}

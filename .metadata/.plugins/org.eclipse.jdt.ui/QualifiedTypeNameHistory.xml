@@ -20,7 +20,6 @@
     <fullyQualifiedTypeName name="com.devs4j.kafka.multithread.Devs4jThreadConsumer"/>
     <fullyQualifiedTypeName name="org.apache.kafka.clients.consumer.ConsumerRecords"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
-    <fullyQualifiedTypeName name="org.apache.kafka.clients.consumer.ConsumerRecord"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="org.apache.kafka.clients.producer.Callback"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
@@ -42,11 +41,14 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
     <fullyQualifiedTypeName name="org.apache.kafka.common.serialization.IntegerSerializer"/>
     <fullyQualifiedTypeName name="org.apache.kafka.common.serialization.StringSerializer"/>
     <fullyQualifiedTypeName name="org.springframework.util.concurrent.ListenableFuture"/>
     <fullyQualifiedTypeName name="org.springframework.kafka.support.SendResult"/>
     <fullyQualifiedTypeName name="org.springframework.kafka.core.KafkaSendCallback"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.apache.kafka.clients.consumer.ConsumerRecord"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
